@@ -1,0 +1,15 @@
+C:\Users\Aleksa Hadzic\source\repos\MovieDbApi\MovieDbApi\bin\Debug\net8.0\MovieDbApi.exe
+C:\Users\Aleksa Hadzic\source\repos\MovieDbApi\MovieDbApi\bin\Debug\net8.0\MovieDbApi.deps.json
+C:\Users\Aleksa Hadzic\source\repos\MovieDbApi\MovieDbApi\bin\Debug\net8.0\MovieDbApi.runtimeconfig.json
+C:\Users\Aleksa Hadzic\source\repos\MovieDbApi\MovieDbApi\bin\Debug\net8.0\MovieDbApi.dll
+C:\Users\Aleksa Hadzic\source\repos\MovieDbApi\MovieDbApi\bin\Debug\net8.0\MovieDbApi.pdb
+C:\Users\Aleksa Hadzic\source\repos\MovieDbApi\MovieDbApi\obj\Debug\net8.0\MovieDbApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aleksa Hadzic\source\repos\MovieDbApi\MovieDbApi\obj\Debug\net8.0\MovieDbApi.AssemblyInfoInputs.cache
+C:\Users\Aleksa Hadzic\source\repos\MovieDbApi\MovieDbApi\obj\Debug\net8.0\MovieDbApi.AssemblyInfo.cs
+C:\Users\Aleksa Hadzic\source\repos\MovieDbApi\MovieDbApi\obj\Debug\net8.0\MovieDbApi.csproj.CoreCompileInputs.cache
+C:\Users\Aleksa Hadzic\source\repos\MovieDbApi\MovieDbApi\obj\Debug\net8.0\MovieDbApi.sourcelink.json
+C:\Users\Aleksa Hadzic\source\repos\MovieDbApi\MovieDbApi\obj\Debug\net8.0\MovieDbApi.dll
+C:\Users\Aleksa Hadzic\source\repos\MovieDbApi\MovieDbApi\obj\Debug\net8.0\refint\MovieDbApi.dll
+C:\Users\Aleksa Hadzic\source\repos\MovieDbApi\MovieDbApi\obj\Debug\net8.0\MovieDbApi.pdb
+C:\Users\Aleksa Hadzic\source\repos\MovieDbApi\MovieDbApi\obj\Debug\net8.0\MovieDbApi.genruntimeconfig.cache
+C:\Users\Aleksa Hadzic\source\repos\MovieDbApi\MovieDbApi\obj\Debug\net8.0\ref\MovieDbApi.dll
