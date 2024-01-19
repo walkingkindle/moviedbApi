@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 
 namespace MovieDbApi
-{
+{ 
     public class ApiResponse
     {
         [JsonProperty("status")]
-        public string Status { get; set; }
+        public required string Status { get; set; }
 
         [JsonProperty("data")]
-        public ShowData Data { get; set; }
+        public List<ShowData>? Data { get; set; }
     }
 }

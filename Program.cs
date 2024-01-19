@@ -19,14 +19,16 @@ internal class Program {
 
                 client.DefaultRequestHeaders.Add("Authorization", $"Bearer {accessToken}");
                 string responseJson = await GetApiResponse(apiKey: apiKey, apiUrl: new Uri(apiUrl), client: client);
-                ApiResponse apiResponse = JsonSerializer.Deserialize<ApiResponse>(responseJson);
-                //TODO: adjust the response based on Json.Newtonsoft Interfaces.
-                    //               if (!string.IsNullOrEmpty(responseJson))
-   //             {
-     //               Show show = MapJsonToShow(responseJson);
-       //             Console.WriteLine($"Show Name: {show.Name}, Id: {show.Id}, Description: {show.Description}");
-         //       }
+                if(responseJson != null)
+                {
+                    List<Show> shows = MapJsonToShow(responseJson);
 
+                    foreach(var show in shows)
+                    {
+                        Console.WriteLine($"Show Name: {show.Name}, Id: {show.Id}, Overview: {show.Description}");
+                    }
+                }
+   
             }
         }
 
@@ -49,7 +51,7 @@ internal class Program {
 
         }
 
-   static async Task<string> GetOneShowById(System.Uri apiUrl, HttpClient client)
+   static async Task<string?> GetOneShowById(System.Uri apiUrl, HttpClient client)
     {
         using(HttpResponseMessage response = await client.GetAsync(apiUrl))
         {
@@ -67,7 +69,7 @@ internal class Program {
         }
     }
 
-    static Show MapJsonToShow(string json)
+    static List<Show>? MapJsonToShow(string json)
     {
         var options = new JsonSerializerOptions
         {
@@ -75,19 +77,28 @@ internal class Program {
         };
         var apiResponse = JsonSerializer.Deserialize<ApiResponse>(json, options);
 
-        return new Show
-        {
-            Id = apiResponse.Data.Id,
-            Name = apiResponse.Data.Name,
-            Description = apiResponse.Data.Overview,
-            ImageUrl = apiResponse.Data.Image,
-            ReleaseDate = DateTime.Parse(apiResponse.Data.FirstAired),
-            FinalEpisodeAired = !string.IsNullOrEmpty(apiResponse.Data.LastAired) ? (DateTime?)DateTime.Parse(apiResponse.Data.LastAired) : null,
-            Score = apiResponse.Data.Score,
-            Status = apiResponse.Data.Status.Name,
-            OriginalCountry = apiResponse.Data.OriginalCountry,
-            OriginalLanguage = apiResponse.Data.OriginalLanguage
-        };
+            var shows = new List<Show>();
+
+            if(apiResponse != null && apiResponse.Data != null)
+            {
+                foreach(var showData in apiResponse.Data)
+                {
+                    shows.Add(new Show
+                    {
+                        Id = showData.Id,
+                        Name = showData.Name,
+                        Description = showData.Overview,
+                        ImageUrl = showData.Image,
+                        ReleaseDate = DateTime.Parse(showData.FirstAired),
+                        FinalEpisodeAired = !string.IsNullOrEmpty(showData.LastAired) ? (DateTime?)DateTime.Parse(showData.LastAired) : null,
+                        Score = showData.Score,
+                        Status = showData.Status.Name,
+                        OriginalCountry = showData.OriginalCountry,
+                        OriginalLanguage = showData.OriginalLanguage
+                    }); ; ;
+                 }
+            }
+            return shows;
         
     }
 

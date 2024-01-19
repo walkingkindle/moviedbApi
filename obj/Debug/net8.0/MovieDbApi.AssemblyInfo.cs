@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MovieDbApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8bb5d778b8b27a2306a34815f640abfb8bd43da0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0d90e9d229cd14f7f0f44f384cd3cb34cb1c929b")]
 [assembly: System.Reflection.AssemblyProductAttribute("MovieDbApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MovieDbApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

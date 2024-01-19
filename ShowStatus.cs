@@ -10,11 +10,12 @@ namespace MovieDbApi
     public class ShowStatus
     {
         [JsonProperty("id")]
-        public int Id { get; set; }
+        public int? Id { get; set; }
         [JsonProperty("name")]
-        public string Name { get; set; }
+        public string? Name { get; set; }
+
         [JsonProperty("recordType")]
-        public string RecordType { get; set; }
+        public string? RecordType { get; set; }
 
         [JsonProperty("keepUpdated")]
         public bool KeepUpdated { get; set; }
