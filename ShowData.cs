@@ -9,8 +9,6 @@ namespace MovieDbApi
 {
     public class ShowData
     {
-        [JsonProperty("id")]
-        public int Id { get; set; }
 
         [JsonProperty("name")]
         public required string  Name { get; set; }
@@ -22,10 +20,10 @@ namespace MovieDbApi
         public string? Image { get; set; }
 
         [JsonProperty("firstAired")]
-        public  DateTime? FirstAired { get; set; }
+        public  string? FirstAired { get; set; }
 
         [JsonProperty("lastAired")]
-        public  DateTime? LastAired { get; set; }
+        public string? LastAired { get; set; }
 
         [JsonProperty("score")]
         public int? Score { get; set; }

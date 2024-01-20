@@ -9,14 +9,14 @@ namespace MovieDbApi
     public class Show
     {
         public int Id { get; set; }
-        public required string Name { get; set; }
-        public required string Description { get; set; }
-        public required string ImageUrl { get; set; }
-        public required DateTime ReleaseDate { get; set; }
+        public  string? Name { get; set; }
+        public string? Description { get; set; }
+        public string? ImageUrl { get; set; }
+        public  DateTime? ReleaseDate { get; set; }
         public DateTime? FinalEpisodeAired { get; set; }
         public int? Score { get; set; }
-        public required string Status { get; set; }
-        public required string OriginalCountry { get; set; }
-        public required string OriginalLanguage { get; set; }
+        public string? Status { get; set; }
+        public  string? OriginalCountry { get; set; }
+        public  string? OriginalLanguage { get; set; }
     }
 }
